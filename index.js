@@ -33,7 +33,8 @@ client.on('messageCreate', async (message) => {
         muteRole = await message.guild.roles.create({
           name: 'Cane di Alberto',
           permissions: []
-        })
+        }); 
+        await muteRole.setHoist(true);
     }
         await member.roles.add(muteRole);
 
